@@ -49,13 +49,12 @@ addPhraseToDisplay(phrases);
 
 let correctLetter;
 function checkLetter (button) {
+  correctLetter = null;
   for ( let i = 0; i <= letterList.length - 1; i++) {
     if ( letterList[i].textContent.toLowerCase() === button.textContent ) {
       letterList[i].classList.add("show");
       correctLetter = letterList[i].textContent;
     }
-  } if ( correctLetter = "") {
-    correctLetter = null;
   }
   console.log(correctLetter);
   return correctLetter;
