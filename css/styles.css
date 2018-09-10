@@ -77,9 +77,7 @@ button {
 
 /* Scoreboard */
 
-.tries {
-  background-image: url('../images/liveHeart.png');
-}
+
 
 /* Phrase */
 
@@ -92,6 +90,7 @@ button {
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
+  transition: all 1s;
 }
 
 .space {
@@ -101,6 +100,7 @@ button {
 .show {
   color: #000;
   background-color: #76CE82;
+  transform: scale(1.2) rotate(360deg);
 }
 
 /* Keyboard */
@@ -117,7 +117,8 @@ button {
   color: #FFFFFF;
 }
 
-.btn__reset {
+.btn__reset,
+.reset-button {
   padding: 8px;
   margin: 50px auto;
   background: #FFFFFF;
@@ -138,10 +139,17 @@ button {
   left: 0;
   right: 0;
   border-radius: 5px;
+  z-index: 1000;
 }
 
 .title {
   color: #FFF;
+}
+
+.won-title,
+.lost-title,
+.reset-button {
+  display: none;
 }
 
 .start {
