@@ -68,12 +68,14 @@ function checkWin () {
   if ( revealedLetters.length === revealableLetters.length) {
     overlay.style.display = "";
     overlay.className = "win";
-    overlay.querySelector(".win-title").style.display = "block";
+    overlay.querySelector(".lost-title").style.display = "none";
+    overlay.querySelector(".won-title").style.display = "block";
     resetButton.style.display = "block";
   } else if ( missed === 5) {
     overlay.style.display = "";
     overlay.className = "lose";
     overlay.querySelector(".lost-title").style.display = "block";
+    overlay.querySelector(".won-title").style.display = "none";
     resetButton.style.display = "block";
   }
 }
